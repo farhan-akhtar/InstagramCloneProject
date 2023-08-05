@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(218, 239, 239);
+}
+
+.container{
+    display: flex;
+    background-color: rgb(218, 239, 239);
+}
+
+.navbar{
+    background-color: rgb(186, 245, 245);
+    border-right: 2px solid grey;
+    width: 15%;
+    margin: auto;
+    padding-left: 20px;
+    padding-top: 50px;
+    height: 100%;
+    position: fixed;
+}
+
+.postArea{
+    width: 80%;
+    margin: auto;
+    margin-left: 20%;
+}
+
+.postsList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+}
+
+.postItem{
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 10px black;
+    margin: 10px;
+    border-radius: 3px;
+    list-style: none;
+    width: 40%;
+    padding: 30px 0px;
+}
+
+.postImage{
+    width: 100%;
+}
+
+h1{
+    font-family: cursive;
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 100px;
+}
+
+a:link{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+    color: darkorchid;
+    text-decoration: none;
+}
+
+.navItem{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.posterName:link{
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.posterName:visited{
+    color: black;
+}
+
+.posterName:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.postTitle{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+.postDescription{
+    font-size: 16px;
+    font-family: cursive;
+    padding: 10px;
+}
+
+.likeButton,
+.unlikeButton{
+    padding-left: 10px;
+    padding-right: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+.commentButton{
+    height: 40px;
+    width: 40px;
+}
+
+.postLikes{
+    font-size: 14px;
+    padding-left: 10px;
+    font-family: sans-serif;
+}
+
+.postTime{
+    font-size: 14px;
+    padding-left: 10px;
+    font-family: sans-serif;
+}
+
+button{
+    margin: 10px 30px;
+    width: 84%;
+    padding: 5px 0px;
+    border-radius: 5px;
+    background-color: rgb(69, 192, 240);
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: 1px solid rgb(69, 192, 240);
+}
+
+.deleteButton{
+    margin: 10px 30px;
+    width: 84%;
+    padding: 5px 0px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: 1px solid rgb(69, 192, 240);
+}

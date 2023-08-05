@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaLitre</title>
+    <link rel="stylesheet" href="/../styles/authenticateStyle.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>InstaLitre</h1>
+
+        <div class="formContainer">
+            <form action="/api/authenticate/signup" method="POST">
+                <input id="fullname" name="fullname" placeholder="Full Name"> <br>
+                <input id="username" name="email" placeholder="Email-Id"> <br>
+                <input id="password" name="password" type="password" placeholder="Password">
+                <img src="/../imgs/eye-close.png" id="eyeicon">
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+        
+        <div class="otheroption">
+            Have an account?
+            <a href="/api/authenticate">Log in</a>
+        </div>
+
+    </div>
+    <script src="/../js/showPass.js"></script>
+</body>
+
+</html>

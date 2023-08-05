@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaLitre</title>
+    <link rel="stylesheet" href="/../styles/profile.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        {{> navbar}}
+        <div class="postArea">
+            <div class="profileArea">
+                <div class="userName">
+                    {{user.fullname}}
+                </div>
+                <span class="followerArea">
+                    <div class="infoCount">{{user.followers.length}}</div>
+                    <div class="infoName">Followers</div>
+                </span>
+                <span class="followingArea">
+                    <div class="infoCount">{{user.following.length}}</div>
+                    <div class="infoName">Following</div>
+                </span><br>
+                <button id={{user._id}} class={{user.followButton}}>{{user.followButton}}</button>
+            </div>
+        </div>
+    </div>
+    <script src="/../js/followButton.js"></script>
+</body>
+</html>

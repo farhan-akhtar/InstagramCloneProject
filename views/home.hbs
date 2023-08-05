@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaLitre</title>
+    <link rel="stylesheet" href="/../styles/HomePage.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        {{> navbar}}
+        <div class="postArea">
+            <ul class="postsList">
+                {{#each data as |d|}}
+                <li class="postItem">
+                    <a class="posterName" href="/api/user/{{d.userId}}">{{d.fullname}}</a><br><br>
+                    <img id={{d._id}} class="postImage" src={{d.imgUrl}}><br>
+                    <img class={{d.button}} id={{d._id}} src={{d.imgPath}}>
+                    <a href="/api/comment/{{d._id}}"><img class="commentButton" src="/../imgs/insta-comment.png"></a><br>
+                    <div class="postLikes">{{d.liked.length}} Likes {{d.comments.length}} Comments</div>
+                    <div class="postTime">{{d.createdTime}}</div><br>
+                    <div class="postTitle">{{d.title}}</div>
+                    <div class="postDescription">{{d.description}}</div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <script src="/../js/likeButton.js"></script>
+</body>
+</html>

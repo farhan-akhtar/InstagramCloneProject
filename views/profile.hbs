@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaLitre</title>
+    <link rel="stylesheet" href="/../styles/profile.css">
+</head>
+<body>
+    <div class="container">
+        {{> navbar}}
+        <div class="postArea">
+            <div class="profileArea">
+                <div class="userName">
+                    {{user.fullname}}
+                </div>
+                <span class="followerArea">
+                    <div class="infoCount">{{user.followers.length}}</div>
+                    <div class="infoName">Followers</div>
+                </span>
+                <span class="followingArea">
+                    <div class="infoCount">{{user.following.length}}</div>
+                    <div class="infoName">Following</div>
+                </span><br>
+                <a href="/api/all_posts"><button>See All My Posts</button></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

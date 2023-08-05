@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 600px;
+    width: 400px;
+    margin:  80px auto;
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 10px black;
+}
+
+.msg{
+    margin: 20px auto;
+    color: red;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h1{
+    padding-top: 50px;
+    margin: 50px auto;
+    text-align: center;
+    font-family: cursive;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.formContainer{
+    padding-top: 70px;
+    padding-left: 50px;
+}
+
+input{
+    width: 80%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+button{
+    margin: 10px 0px;
+    width: 84%;
+    padding: 5px 0px;
+    border-radius: 5px;
+    background-color: rgb(69, 192, 240);
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: 1px solid rgb(69, 192, 240);
+}
+#fullname{
+    text-align: center;
+}
+
+#username{
+    margin-top: 5px;
+    text-align: center;
+}
+
+#password{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.otheroption{
+    text-align: center;
+    margin: 80px auto;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+a:link{
+    text-decoration: none;
+    color: rgb(33, 155, 203);
+    margin-left: 8px;
+}
+
+a:visited{
+    color: rgb(33, 155, 203);
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+#showpass{
+    width:auto;
+    margin-top: 3px;
+}
+
+#eyeicon{
+    margin-left: 5px;
+    height: 15px;
+    width: 20px;
+}

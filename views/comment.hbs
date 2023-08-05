@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaLitre</title>
+    <link rel="stylesheet" href="/../styles/comment.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        {{> navbar}}
+        
+        <div class="postArea">
+           
+            <ul class="postsList">
+                <li class="postItem">
+                    <a class="posterName" href="/api/user/{{post.userId}}">{{post.fullname}}</a><br><br>
+                    <img id={{post._id}} class="postImage" src={{post.imgUrl}}><br>
+                    <img class={{post.button}} id={{post._id}} src={{post.imgPath}}>
+                    <a href="/api/comment/{{post._id}}"><img class="commentButton" src="/../imgs/insta-comment.png"></a><br>
+                    <div class="postLikes">{{post.liked.length}} Likes {{post.comments.length}} Comments</div>
+                    <div class="postTime">{{post.createdTime}}</div><br>
+                    <div class="postTitle">{{post.title}}</div>
+                    <div class="postDescription">{{post.description}}</div>
+                </li>
+                <li class="postItem">
+                    <div class="commentSection">
+                        <h3 class="commentHeading">Comments</h3>
+                        <ul class="commentArea">
+                            {{#each comments as |c| }}
+                            <li class="commentBlock">
+                                <a class="commenterName" href="/api/user/{{c.userId}}">{{c.fullname}}</a><br>
+                                <div class="comment">{{c.comment}}</div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                        <form class="commentForm" action="/api/comment" method="POST">
+                            <input class="commentHide" name="postId" value = {{post._id}}>
+                            <input id="commentContent" name="comment" placeholder="Write your comment here"><br>
+                            <button class="commentPost" type="submit">Post</button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="/../js/likeButton.js"></script>
+</body>
+</html>

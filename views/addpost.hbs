@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaLitre</title>
+    <link rel="stylesheet" href="/../styles/addPost.css">
+</head>
+<body>
+    <div class="container">
+        {{> navbar}}
+        <div class="postFormArea">
+            <div class="addpost">
+                <div class="msg">{{msg}}</div>
+                <form class="postsForm" action="/api/posts/" method="POST">
+                    <input id="image" type="text" name="imgUrl" placeholder="Enter Image URL"><br>
+                    <input type="text" name="title" placeholder="Enter Title"><br>
+                    <input type="text" name="description" placeholder="Enter Description"><br>
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
