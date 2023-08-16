@@ -6,6 +6,7 @@ const hbs = require('hbs');
 const session = require('express-session');
 const passport = require('./auth/passport');
 const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo');
 
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
@@ -15,10 +16,13 @@ app.use(express.json());
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
+require('dotenv').config();
+
 app.use(session({
-    secret: 'asdjbaskdadbaskdhdibs',
+    secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL})
 }));
 
 app.use(passport.initialize());
@@ -44,7 +48,7 @@ app.use('/api/user', require('./routes/profile'));
 
 app.use('/api/all_posts', require('./routes/allUserPosts'));
 
-mongoose.connect('mongodb://127.0.0.1/instaDB')
+mongoose.connect(process.env.MONGO_URL)
     .then(()=>{
         app.listen(PORT, () => {
             console.log(`http://localhost:` + PORT);
